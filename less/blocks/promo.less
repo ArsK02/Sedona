@@ -1,0 +1,61 @@
+.promo {
+    position: relative;
+
+    padding-top: 90px;
+    padding-bottom: 85px;
+
+    background: @bg-blue url("../img/photo-background@1x.jpg") no-repeat center 0;
+    background-size: cover;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 26px;
+
+        margin-bottom: -1px;
+
+        background: url("../img/triangle-mobile.svg") no-repeat 0 0;
+        
+    }
+}
+
+.promo__banner {
+    display: block;
+
+    width: 282px;
+    height: 214px;
+
+    margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+    .promo {
+        padding-top: 77px;
+        padding-bottom: 90px;
+
+        &::after {
+            height: 57px;
+
+            background-image: url("../img/triangle-tablet.svg");
+        }
+    }
+
+    .promo__banner {
+        width: 462px;
+        height: 350px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .promo {
+        &::after {
+            background-image: url("../img/triangle-desktop.svg");
+        }
+    }
+}
