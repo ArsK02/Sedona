@@ -25,6 +25,11 @@
     }
 }
 
+.promo--inner {
+    padding-top: 52px;
+    padding-bottom: 68px;
+}
+
 .promo__banner {
     display: block;
 
@@ -32,6 +37,11 @@
     height: 214px;
 
     margin: 0 auto;
+}
+
+.promo--inner .promo__banner {
+    height: 39px;
+    width: 229px;
 }
 
 @media (min-width: @tablet-width) {
@@ -46,9 +56,18 @@
         }
     }
 
+    .promo--inner {
+        background-position: 0 -80px;
+    }
+
     .promo__banner {
         width: 462px;
         height: 350px;
+    }
+
+    .promo--inner .promo__banner {
+        width: 457px;
+        height: 78px;
     }
 }
 
@@ -57,5 +76,9 @@
         &::after {
             background-image: url("../img/triangle-desktop.svg");
         }
+    }
+
+    .promo--inner {
+        background-position: 0 -195px;
     }
 }

@@ -1,0 +1,165 @@
+.gallery__list {
+    .reset-list();
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery__picture {
+    width: 100%;
+
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    border-top: 1px solid #e5e5e5;
+
+    &:last-child {
+        border-bottom: 1px solid #e5e5e5;
+    }
+}
+
+.gallery__image {
+    width: 100%;
+}
+
+.gallery__info {
+    margin-top: 15px;
+}
+
+.gallery__title {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.gallery__author {
+    text-transform: none;
+}
+
+.gallery__like {
+    display: block;
+
+    position: relative;
+
+    padding-left: 37px;
+    margin-top: 5px;
+
+    color: #000000;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.gallery__button {
+    .button-rest();
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 21px;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+        outline: none;
+    }
+
+    &:active {
+        transform: scale(1.0);
+        outline: none;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .gallery__wrapper {
+        width: 84%;
+        max-width: 960px;
+
+        margin: 0 auto;
+    }
+
+    .gallery__picture {
+        padding: 0;
+        border-top: none;
+
+        width: 50%;
+        padding-bottom: 15px;
+
+        background-color: #f2f2f2;
+
+        &:nth-child(3n) {
+            background-color: #eaeaea;
+        }
+
+        &:first-child {
+            width: 100%;
+        }
+
+        &:last-child {
+            border-bottom: none;  
+        }   
+    }
+
+    .gallery__info-wrapper {
+        display: flex;
+    }
+
+    .gallery__info {
+        margin-left: 20px;
+    }
+
+    .gallery__like {
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: 21px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .gallery__picture {
+        position: relative;
+
+        width: 33.33%;
+
+        padding: 0;
+    }
+
+    .gallery__image-wrapper {
+        margin-bottom: -5px;
+    }
+
+    .gallery__info-wrapper {
+        position: absolute;
+
+        width: 100%;
+
+        bottom: 0;
+        left: 0;
+
+        padding-bottom: 15px;
+        padding-top: 7px;
+
+        background-color: rgba(0,0,0,.3);
+    }
+
+    .gallery__title {
+        color: #ffffff;
+    }
+
+    .gallery__author {
+        color: #ffffff;
+    }
+
+    .gallery__like {
+        color: #ffffff;
+    }
+
+    .gallery__button path {
+        fill: #ffffff;
+    }
+}

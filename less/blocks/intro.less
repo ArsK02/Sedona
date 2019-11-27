@@ -24,6 +24,14 @@
     }
 }
 
+.intro--inner {
+    padding-bottom: 30px;
+
+    &::after {
+        display: none;
+    } 
+}
+
 .intro__slogan {
     display: block;
 
@@ -59,11 +67,24 @@
         }
     }
 
+    .intro--inner {
+        padding-bottom: 70px;
+    }
+
     .intro__slogan {
         padding-left: 104px;
         padding-right: 104px;
 
         font-size: 21px;
+    }
+
+    .intro--inner .intro__slogan {
+        font-size: 30px;
+    }
+
+    .intro--inner .intro__text {
+        padding-left: 150px;
+        padding-right: 150px;
     }
 }
 
@@ -71,5 +92,10 @@
     .intro__slogan {
         padding-left: 260px;
         padding-right: 260px;
+    }
+
+    .intro--inner .intro__text {
+        padding-left: 300px;
+        padding-right: 300px;
     }
 }
