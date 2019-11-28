@@ -27,9 +27,11 @@ body {
     color: #333333;
     text-transform: uppercase;
 }
-.visually-hidden:not(:focus):not(:active) {
+
+.visually-hidden:not(:focus):not(:active), 
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -37,8 +39,10 @@ body {
     padding: 0;
     white-space: nowrap;
     clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
 .img {
     max-width: 100%;
     height: auto;

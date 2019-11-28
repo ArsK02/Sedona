@@ -1,6 +1,8 @@
 .page-header {
     display: flex;
     flex-direction: column;
+
+    position: relative;
 }
 
 .page-header__logo {
@@ -15,13 +17,7 @@
 
     margin-left: -51px;
 
-    z-index: 10;
-}
-
-@media (min-width: @tablet-width) {
-    .page-header {
-        position: relative;
-    }
+    z-index: 1;
 }
 
 @media (min-width: @desktop-width) {
